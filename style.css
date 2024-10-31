@@ -330,3 +330,63 @@ tr:hover {
 
 }
 
+/* Burger Menü Button Style */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
+}
+
+.burger span {
+    height: 4px;
+    width: 25px;
+    background: white;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+/* Versteckt das Menü auf Mobilgeräten und zeigt das Burger-Icon */
+@media screen and (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    .nav {
+        display: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 4.5em;
+        left: 0;
+    }
+
+    .nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .nav ul li a {
+        color: white;
+        font-size: 1.2em;
+        padding: 0.8em 0;
+        display: block;
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+
+    /* Burger-Menü aktiv */
+    .nav.nav-active {
+        display: block;
+    }
+}

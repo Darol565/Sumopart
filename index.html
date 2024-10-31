@@ -13,6 +13,12 @@
 <body>
 <header class="header">
     <h1 class="titleText">SUMOPARTS</h1>
+    <!-- Burger-Button -->
+    <div class="burger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 </header>
 
 <nav class="nav">
@@ -22,7 +28,6 @@
         <li><a href="cloth.html">Cloth</a></li>
         <li><a href="parts.html">Parts</a></li>
         <li><a href="exhaust.html">Exhaust</a></li>
-
     </ul>
 </nav>
 
@@ -30,6 +35,7 @@
     <h4 class="motText">Welcome to Sumoparts</h4>
     <h4 id="intText">- Your shop for all your motorcycle needs -</h4>
 </div>
+
 <div class="items">
     <div class="item">
         <p><br></p>
@@ -61,5 +67,13 @@
         <li><a href="lieferung.html">Lieferung</a></li>
     </ul>
 </footer>
+
+<!-- JavaScript für das Burger-Menü -->
+<script>
+    function toggleMenu() {
+        const nav = document.querySelector('.nav');
+        nav.classList.toggle('nav-active');
+    }
+</script>
 </body>
 </html>
