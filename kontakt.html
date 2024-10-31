@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script defer src="app.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <h1 class="titleText">SUMOPARTS</h1>
+</header>
+
+<nav class="nav">
+  <ul>
+    <li><a href="kontakt.html" class="active">Kontakt</a></li>
+    <li><a href="index.html">Home</a></li>
+  </ul>
+</nav>
+
+<section id="main">
+  <h2 class="motText">Kontaktiere mich!</h2>
+  <form id="formular" action="/submit-form" method="post">
+    <!-- Name -->
+    <label class="labelStyle" for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <!-- E-Mail -->
+    <label class="labelStyle" for="email">E-Mail:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <!-- Nachricht -->
+    <label class="labelStyle" for="message">Nachricht:</label><br>
+    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+    <!-- Absenden-Button -->
+    <button id="submit"><a id="sendLink" href="index.html">Senden</a></button>
+  </form>
+</section>
+<footer>
+  <ul>
+    <li>&copy; 2024 David Roux</li>
+    <li><a href="impressum.html">Impressum</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+    <li><a href="lieferung.html">Lieferung</a></li>
+  </ul>
+</footer>
+</body>
+</html>
