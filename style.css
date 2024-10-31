@@ -28,31 +28,32 @@ body {
 /*NAVIGATION STYLE*/
 
 nav {
-    display:block;
-    height:2.5em;
-    text-align:center;
+    display: block;
+    height: 2.5em;
+    text-align: center;
     justify-items: center;
 }
 
 nav ul {
-    display:block;
+    display: block;
     text-align: center;
-    margin-left: -2.5em ;}
+    margin-left: -2.5em;
+}
 
 nav ul li {
-    display:inline;
-    margin:0em 0.188em 0em 0.188em;
+    display: inline;
+    margin: 0em 0.188em 0em 0.188em;
     text-align: center;
 
 }
 
 nav ul li a {
-    color:#454040;
+    color: #454040;
     font-size: 1.125em;
-    line-height:2.5em;
-    padding:0.563em 0.938em 0.375em 0.983em;
-    transition:background 0.2s;
-    -webkit-transition:background 0.2s;
+    line-height: 2.5em;
+    padding: 0.563em 0.938em 0.375em 0.983em;
+    transition: background 0.2s;
+    -webkit-transition: background 0.2s;
     font-family: 'Public Sans', sans-serif;
     color: white;
     text-decoration: none;
@@ -72,7 +73,7 @@ nav ul li a.active {
 
 /*ITEM SECTION STYLE*/
 
-.itemImage{
+.itemImage {
     height: 100%;
     width: 100%;
     border-radius: 1em;
@@ -156,7 +157,7 @@ footer ul {
 footer ul li {
     display: inline;
     font-size: 0.8em;
-    line-height :2.8em;
+    line-height: 2.8em;
     color: #E2DBDB;
     padding: 0em 0.625em 0em 0.625em;
     font-family: 'Public Sans', sans-serif;
@@ -171,42 +172,45 @@ footer ul li a {
 
 /* MOBILE STYLE */
 
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px) {
     body {
-        font-size:90%;
+        font-size: 90%;
 
     }
 }
 
-@media screen and (max-width:600px) {
-    .items, .contentDiv{
-        width:100%;
-        display:block;
-        margin:0.625em 0em 0.625em 0em;
+@media screen and (max-width: 600px) {
+    .items, .contentDiv, footer {
+        width: 100%;
+        display: block;
+        margin: 0.625em 0em 0.625em 0em;
 
     }
 }
 
-@media screen and (max-width:550px) {
+@media screen and (max-width: 550px) {
     nav.nav {
-        display:block !important;
+        display: block !important;
     }
 }
 
-@media screen and (max-width:550px) {
+@media screen and (max-width: 550px) {
     body {
-        font-size:86%;
+        font-size: 86%;
     }
+
     #menubar ul li a.menubutton {
-        display:block;
+        display: block;
     }
+
     nav {
-        display:none;
-        height:auto;
+        display: none;
+        height: auto;
     }
+
     nav ul li {
-        display:block;
-        margin:0.3em 0em 0.3em 0em;
+        display: block;
+        margin: 0.3em 0em 0.3em 0em;
     }
 }
 
@@ -224,7 +228,7 @@ footer ul li a {
     padding: 0.5em 1em;
     border: none;
     border-radius: 0.5em;
-    font-family: "Encode Sans";
+    font-family: 'Public Sans', sans-serif;
     font-weight: normal;
     font-size: 1em;
     cursor: pointer;
@@ -251,7 +255,7 @@ footer ul li a {
 
 .labelStyle {
     color: white;
-    font-family: "Encode Sans";
+    font-family: 'Public Sans', sans-serif;
     font-weight: normal;
     font-size: 1em;
     padding-top: 1em;
@@ -262,6 +266,7 @@ footer ul li a {
 #tabelleDiv {
     padding-bottom: 30%;
 }
+
 table {
     width: 50%;
     border-collapse: collapse;
