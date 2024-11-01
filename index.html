@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Sumoparts</title>
     <link rel="stylesheet" href="style.css">
+    <script src="/burgerMenu.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Average+Sans&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
@@ -67,22 +68,5 @@
         <li><a href="lieferung.html">Lieferung</a></li>
     </ul>
 </footer>
-
-<!-- JavaScript für das Burger-Menü -->
-<script>
-    function toggleMenu() {
-        const nav = document.querySelector('.nav');
-        nav.classList.toggle('nav-active');
-    }
-
-    // Menü schließen, wenn die Fenstergröße geändert wird
-    window.addEventListener('resize', () => {
-        const nav = document.querySelector('.nav');
-        if (window.innerWidth > 768) {
-            nav.classList.remove('nav-active');
-        }
-    });
-
-</script>
 </body>
 </html>

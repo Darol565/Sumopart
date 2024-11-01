@@ -6,6 +6,11 @@ body {
     font-size: 100%;
     margin: 0em;
     padding: 0em;
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+    max-width: 100%;
 }
 
 /*HEADER STYLE*/
@@ -89,8 +94,9 @@ nav ul li a.active {
     gap: 20px;
     text-align: center;
     justify-items: center;
-    padding-top: 12%;
-    padding-bottom: 6%;
+    padding-bottom: 14%;
+    padding-right: 1em;
+    padding-left: 1em;
 }
 
 .item {
@@ -108,7 +114,7 @@ nav ul li a.active {
 .motText {
     color: white;
     font-family: 'Public Sans', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.6em;
     padding-top: 1em;
     text-align: center;
 }
@@ -123,14 +129,15 @@ nav ul li a.active {
 #intText {
     color: white;
     font-family: 'Public Sans', sans-serif;
-    font-size: 0.9em;
+    font-size: 1.2em;
     text-align: center;
     font-style: italic;
     margin-top: -1em;
 }
 
 .contentDiv {
-    margin-bottom: -8em;
+    margin-top: 4em;
+    flex: 1;
 }
 
 
@@ -141,6 +148,8 @@ footer {
     background: #2F2C2C;
     text-align: center;
     width: 100%;
+    padding: 0.5em 0; /* Platzierung für den Footer-Inhalt */
+    margin-top: auto;
 }
 
 footer ul {
@@ -172,6 +181,56 @@ footer ul li a {
 
 /* MOBILE STYLE */
 
+
+@media screen and (max-width: 1400px) {
+    .motText {
+        font-size: 1.2em;
+    }
+
+    .intText {
+        font-size: 0.8em;
+    }
+
+    .contentDiv {
+        margin-top: 2em;
+    }
+
+    .items {
+        grid-template-columns: repeat(2, 2fr);
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .motText {
+        font-size: 1em;
+    }
+
+    .intText {
+        font-size: 0.6em;
+    }
+
+    .contentDiv {
+        margin-top: 2em;
+        flex: 1;
+    }
+
+    .items {
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    body {
+        min-height: 100vh; /* Sicherstellen, dass der Body die volle Höhe abdeckt */
+        font-size: 95%;
+
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        margin: 0;
+    }
+}
+
 @media screen and (max-width: 800px) {
     body {
         font-size: 90%;
@@ -181,6 +240,12 @@ footer ul li a {
         margin: 0em;
         padding: 0em;
         width: 100%;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        margin: 0;
     }
 }
 
@@ -194,29 +259,51 @@ footer ul li a {
         background-size: cover;
         padding: 0em;
     }
+    footer {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 550px) {
     nav.nav {
-        display: block !important;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
         padding: 0em;
-        width: 104%;
+    }
+
+    body {
+        min-width: 110vw;
+        min-height: 100vh;
+        overflow-x: hidden; /* Verhindert horizontales Scrollen */
+
+    }
+    .contentDiv {
+        flex: 1;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        margin: 0;
     }
 }
 
 @media screen and (max-width: 450px) {
     body {
+        min-width: 100vw;
+        min-height: 100vh;
+        overflow-x: hidden; /* Verhindert horizontales Scrollen */
         font-size: 86%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        padding: 0em;
-        width: 104%;
     }
 
+    .contentDiv {
+        flex: 1;
+        margin-top: 3em;
+    }
 
     #menubar ul li a.menubutton {
         display: block;
@@ -231,18 +318,45 @@ footer ul li a {
         display: block;
         margin: 0.3em 0em 0.3em 0em;
     }
+
+
+    .motText {
+        font-size: 1.2em;
+    }
+
+    .intText {
+        font-size: 0.8em;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        margin: 0;
+    }
+
 }
 
-
-@media screen and (max-width: 450px) {
-    body {
-        font-size: 86%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        padding: 0em;
-        width: 106%;
+@media screen and (max-width: 370px) {
+    .burger {
+        margin-left: 4em;
     }
+    body {
+             min-width: 100vw;
+             min-height: 100vh;
+             overflow-x: hidden; /* Verhindert horizontales Scrollen */
+             font-size: 86%;
+    }
+    .contentDiv {
+        flex: 1;
+        margin-top: 3em;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        margin: 0;
+    }
+}
 
 /* Formular */
 
@@ -352,6 +466,7 @@ tr:hover {
 /* kontakt STYLE */
 
 #main {
+    padding-top: 10em;
     padding-bottom: 10em;
     text-align: center;
     align-items: center;
