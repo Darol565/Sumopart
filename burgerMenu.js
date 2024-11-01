@@ -3,7 +3,7 @@ function toggleMenu() {
     nav.classList.toggle('nav-active');
 }
 
-// Menü schließen, wenn die Fenstergröße geändert wird
+// Menü schließen, wenn die Fenstergrösse geändert wird
 window.addEventListener('resize', () => {
     const nav = document.querySelector('.nav');
     if (window.innerWidth > 768) {

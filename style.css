@@ -9,9 +9,10 @@ body {
     min-height: 100vh;
     flex-direction: column;
     display: flex;
-    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+    overflow-x: hidden;
     max-width: 100%;
 }
+
 
 /*HEADER STYLE*/
 
@@ -29,6 +30,7 @@ body {
     margin-bottom: -0.5em;
     text-align: center;
 }
+
 
 /*NAVIGATION STYLE*/
 
@@ -75,6 +77,25 @@ nav ul li a.active {
     border-bottom: 0.188em solid #E7590B;
 
 }
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
+    z-index: 10;
+}
+
+.burger span {
+    height: 4px;
+    width: 25px;
+    background: white;
+    margin: 5px;
+    border-radius: 2px;
+}
+
 
 /*ITEM SECTION STYLE*/
 
@@ -181,7 +202,6 @@ footer ul li a {
 
 /* MOBILE STYLE */
 
-
 @media screen and (max-width: 1400px) {
     .motText {
         font-size: 1.2em;
@@ -219,10 +239,11 @@ footer ul li a {
     }
 
     body {
-        min-height: 100vh; /* Sicherstellen, dass der Body die volle Höhe abdeckt */
+        min-height: 100vh;
         font-size: 95%;
 
     }
+
     footer {
         display: flex;
         flex-direction: column;
@@ -241,11 +262,69 @@ footer ul li a {
         padding: 0em;
         width: 100%;
     }
+
     footer {
         display: flex;
         flex-direction: column;
         min-height: 100%;
         margin: 0;
+    }
+}
+
+/* Versteckt das Menü auf Mobilgeräten und zeigt das Burger-Icon */
+
+@media screen and (max-width: 768px) {
+    .burger {
+        display: flex; /* Burger-Button wird sichtbar */
+    }
+
+    .nav {
+        display: none; /* Menü standardmässig versteckt */
+        text-align: center;
+        width: 100%;
+        opacity: 1%;
+        margin-top: -30em;
+    }
+
+    .nav.nav-active {
+        display: flex; /* Menü wird sichtbar, wenn aktiv */
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 4.5em;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 1em 0;
+        z-index: 9;
+        opacity: 100%;
+        margin-top: 1em;
+
+    }
+
+    .nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .nav ul li a {
+        color: white;
+        font-size: 1.2em;
+        padding: 0.8em 0;
+        text-decoration: none;
+        display: block;
+        transition: background 0.3s;
+    }
+
+    .nav ul li a:hover {
+        background-color: #333;
     }
 }
 
@@ -258,6 +337,7 @@ footer ul li a {
         background-size: cover;
         padding: 0em;
     }
+
     footer {
         display: flex;
         flex-direction: column;
@@ -275,14 +355,13 @@ footer ul li a {
     }
 
     body {
-        /*min-width: 110vw;*/
-        /*min-height: 100vh;*/
-        overflow-x: hidden; /* Verhindert horizontales Scrollen */
-
+        overflow-x: hidden;
     }
+
     .contentDiv {
         flex: 1;
     }
+
     footer {
         display: flex;
         flex-direction: column;
@@ -293,9 +372,7 @@ footer ul li a {
 
 @media screen and (max-width: 450px) {
     body {
-        /*min-width: 100vw;*/
-        /*min-height: 100vh;*/
-        overflow-x: hidden; /* Verhindert horizontales Scrollen */
+        overflow-x: hidden;
         font-size: 86%;
     }
 
@@ -326,6 +403,7 @@ footer ul li a {
     .intText {
         font-size: 0.8em;
     }
+
     footer {
         display: flex;
         flex-direction: column;
@@ -339,16 +417,17 @@ footer ul li a {
     .burger {
         margin-left: 4em;
     }
+
     body {
-             /*min-width: 100vw;*/
-             /*min-height: 100vh;*/
-             overflow-x: hidden; /* Verhindert horizontales Scrollen */
-             font-size: 86%;
+        overflow-x: hidden;
+        font-size: 86%;
     }
+
     .contentDiv {
         flex: 1;
         margin-top: 3em;
     }
+
     footer {
         display: flex;
         flex-direction: column;
@@ -356,6 +435,7 @@ footer ul li a {
         margin: 0;
     }
 }
+
 
 /* Formular */
 
@@ -405,7 +485,9 @@ footer ul li a {
     padding-bottom: 1em;
 }
 
+
 /* Tabelle STYLE */
+
 #tabelleDiv {
     padding-bottom: 30%;
 }
@@ -420,7 +502,6 @@ table {
     margin: 0 auto;
 }
 
-/* Tabellenkopf: fetter weißer Text, orange Linie */
 th {
     background-color: #ffffff;
     color: #333;
@@ -431,7 +512,6 @@ th {
     font-family: 'Public Sans', sans-serif;
 }
 
-/* Tabellenzellen: zentriert mit Abstand */
 td {
     padding: 12px;
     text-align: center;
@@ -440,15 +520,14 @@ td {
     font-family: 'Public Sans', sans-serif;
 }
 
-/* Abwechselnde Zeilenfarben */
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-/* Hover-Effekt für Zeilen */
 tr:hover {
     background-color: #f1f1f1;
 }
+
 
 /* Impressum STYLE */
 
@@ -462,7 +541,8 @@ tr:hover {
     border-radius: 15px;
 }
 
-/* kontakt STYLE */
+
+/* Kontakt STYLE */
 
 #main {
     padding-top: 10em;
@@ -473,79 +553,3 @@ tr:hover {
     margin: 0 auto;
 
 }
-
-/* Burger-Menü Button Style */
-.burger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    position: absolute;
-    top: 1.5em;
-    right: 1.5em;
-    z-index: 10;
-}
-
-.burger span {
-    height: 4px;
-    width: 25px;
-    background: white;
-    margin: 5px;
-    border-radius: 2px;
-}
-
-/* Versteckt das Menü auf Mobilgeräten und zeigt das Burger-Icon */
-@media screen and (max-width: 768px) {
-    .burger {
-        display: flex; /* Burger-Button wird sichtbar */
-    }
-
-    .nav {
-        display: none; /* Menü standardmäßig versteckt */
-        text-align: center;
-        width: 100%;
-        opacity: 1%;
-        margin-top: -30em;
-    }
-
-    .nav.nav-active {
-        display: flex; /* Menü wird sichtbar, wenn aktiv */
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 4.5em;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        padding: 1em 0;
-        z-index: 9;
-        opacity: 100%;
-        margin-top: 1em;
-
-    }
-
-    .nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        width: 100%;
-    }
-
-    .nav ul li {
-        display: block;
-        margin: 0.5em 0;
-    }
-
-    .nav ul li a {
-        color: white;
-        font-size: 1.2em;
-        padding: 0.8em 0;
-        text-decoration: none;
-        display: block;
-        transition: background 0.3s;
-    }
-
-    .nav ul li a:hover {
-        background-color: #333;
-    }
-}
-
