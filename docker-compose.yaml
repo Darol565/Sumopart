@@ -1,0 +1,5 @@
+services:
+  website:
+    image: git-registry.gibb.ch/dro146793/docker/sumoparts
+    ports:
+      - "80:80"
